@@ -20,14 +20,14 @@ jobs:
           package-manager: pnpm@latest 
 
       - name: configure gcp credentials
-        if: ${{ github.ref == 'refs/heads/develop' }}
+        if: ${{ github.ref == 'refs/heads/main' }}
         uses: google-github-actions/auth@v2
         with:
           workload_identity_provider: "projects/1043231896197/locations/global/workloadIdentityPools/github-actions-pool/providers/github"
           service_account: "github-actions@the-mee-foundation.iam.gserviceaccount.com"
 
       - name: deploy to bucket
-        if: ${{ github.ref == 'refs/heads/develop' }}
+        if: ${{ github.ref == 'refs/heads/main' }}
         run: |
           gcloud storage rsync --recursive ./dist gs://meeextension-bucket
           gcloud storage objects update --content-type="text/html" --cache-control="public, max-age=60" --content-disposition="" gs://meeextension-bucket/*.html
