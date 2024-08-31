@@ -31,4 +31,4 @@ jobs:
         run: |
           gcloud storage rsync --recursive ./dist gs://meeextension-bucket
           gcloud storage objects update --content-type="text/html" --cache-control="public, max-age=60" --content-disposition="" gs://meeextension-bucket/*.html
-          gcloud compute url-maps invalidate-cdn-cache prod-url-map --project the-mee-foundation --path "/index.html" --host "meeextension.org" --async 
+          gcloud compute url-maps invalidate-cdn-cache dev-url-map --project the-mee-foundation --path "/index.html" --host "meeextension.org" --async 
