@@ -1,8 +1,10 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
-// import { ButtonLink, Footer } from "mee-components";
+import { ButtonLink } from "mee-components";
 import Footer from "../components/Footer.astro";
+
+const extensionLink = "https://chromewebstore.google.com/detail/mee-extension-let-the-web/gfcagdccenaomgheadeimkfdfgkdapcf";
 ---
 
 <Layout title="Mee Extension">
@@ -34,14 +36,14 @@ import Footer from "../components/Footer.astro";
           </div>
         </div>
       </section>
-      <!-- <section class="flex w-full flex-wrap items-center justify-center gap-6">
+      <section class="flex w-full flex-wrap items-center justify-center gap-6">
         <ButtonLink
           id="join"
           className="!w-52"
-          href="https://chromewebstore.google.com/"
+          href={extensionLink}
           target="_blank">Download extension</ButtonLink
         >
-      </section> -->
+      </section>
       <section
         class="section relative top-0 my-28 flex w-screen flex-col items-center justify-center pt-28"
       >
@@ -117,12 +119,12 @@ import Footer from "../components/Footer.astro";
               </p>
             </div>
           </div>
-          <!-- <ButtonLink
+          <ButtonLink
             id="join"
             className="!w-52"
-            href="https://chromewebstore.google.com/"
+            href={extensionLink}
             target="_blank">Download extension</ButtonLink
-          > -->
+          >
         </div>
       </section>
       <Footer
