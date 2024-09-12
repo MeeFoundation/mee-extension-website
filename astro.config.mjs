@@ -28,7 +28,7 @@ export default defineConfig({
         replacesTitle: true,
       },
       editLink: {
-        baseUrl: "https://github.com/meefoundation/docs/edit/develop/docs/",
+        baseUrl: "https://github.com/meefoundation/mee-extension-website/edit/main/",
       },
       social: {
         github: "https://github.com/MeeFoundation/browser-extensions",
