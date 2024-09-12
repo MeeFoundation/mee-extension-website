@@ -2,9 +2,14 @@ name: dev-ci
 
 on:
   workflow_dispatch:
+  
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     permissions:
       id-token: write
@@ -13,22 +18,18 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
       - name: Install, build, and upload your site
-        uses: withastro/action@v2
+        uses: withastro/action@v3
         with:
           path: .
           node-version: 20 
           package-manager: pnpm@latest 
-
-      - name: configure gcp credentials
-        if: ${{ github.ref == 'refs/heads/main' }}
-        uses: google-github-actions/auth@v2
-        with:
-          workload_identity_provider: "projects/1043231896197/locations/global/workloadIdentityPools/github-actions-pool/providers/github"
-          service_account: "github-actions@the-mee-foundation.iam.gserviceaccount.com"
-
-      - name: deploy to bucket
-        if: ${{ github.ref == 'refs/heads/main' }}
-        run: |
-          gcloud storage rsync --recursive ./dist gs://meeextension-bucket
-          gcloud storage objects update --content-type="text/html" --cache-control="public, max-age=60" --content-disposition="" gs://meeextension-bucket/*.html
-          gcloud compute url-maps invalidate-cdn-cache dev-url-map --project the-mee-foundation --path "/index.html" --host "meeextension.org" --async 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
