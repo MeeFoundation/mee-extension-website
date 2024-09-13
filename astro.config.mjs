@@ -4,6 +4,9 @@ import tailwind from "@astrojs/tailwind";
 import starlight from "@astrojs/starlight";
 
 export const site = "https://meextension.org/";
+export const meeFoundation = "https://mee.foundation/";
+export const github = "https://github.com/MeeFoundation/browser-extensions";
+export const discord = "https://discord.com/channels/1275848491964436491/1275848492413223025";
 export const sharedConfig = {
   title: "Mee Extension",
   logo: {
@@ -31,7 +34,7 @@ export default defineConfig({
         baseUrl: "https://github.com/meefoundation/mee-extension-website/edit/main/",
       },
       social: {
-        github: "https://github.com/MeeFoundation/browser-extensions",
+        github: github,
       },
       customCss: process.env.NO_GRADIENTS ? [] : ["/src/assets/landing.css"],
       locales: {

@@ -1,10 +1,12 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
-import { ButtonLink } from "mee-components";
 import Footer from "../components/Footer.astro";
+import ChromeStoreBadge from "@components/ChromeStoreBadge.astro";
+import ChromeStoreBadge2 from "@components/ChromeStoreBadge2.astro";
 
-const extensionLink = "https://chromewebstore.google.com/detail/mee-extension-let-the-web/gfcagdccenaomgheadeimkfdfgkdapcf";
+const extensionLink =
+  "https://chromewebstore.google.com/detail/mee-extension-let-the-web/gfcagdccenaomgheadeimkfdfgkdapcf";
 ---
 
 <Layout title="Mee Extension">
@@ -37,12 +39,9 @@ const extensionLink = "https://chromewebstore.google.com/detail/mee-extension-le
         </div>
       </section>
       <section class="flex w-full flex-wrap items-center justify-center gap-6">
-        <ButtonLink
-          id="join"
-          className="!w-52"
-          href={extensionLink}
-          target="_blank">Download extension</ButtonLink
-        >
+        <a href={extensionLink} target="_blank">
+          <ChromeStoreBadge />
+        </a>
       </section>
       <section
         class="section relative top-0 my-28 flex w-screen flex-col items-center justify-center pt-28"
@@ -119,24 +118,12 @@ const extensionLink = "https://chromewebstore.google.com/detail/mee-extension-le
               </p>
             </div>
           </div>
-          <ButtonLink
-            id="join"
-            className="!w-52"
-            href={extensionLink}
-            target="_blank">Download extension</ButtonLink
-          >
+          <a href={extensionLink} target="_blank">
+            <ChromeStoreBadge2 />
+          </a>
         </div>
       </section>
-      <Footer
-        mode="dark"
-        rightLinks={[
-          {
-            link: "/privacy-policy/",
-            name: "Privacy Policy",
-            target: "_blank",
-          },
-        ]}
-      />
+      <Footer mode="dark" />
     </article>
   </main>
 </Layout>
