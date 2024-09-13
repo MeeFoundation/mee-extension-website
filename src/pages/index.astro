@@ -13,7 +13,7 @@ const extensionLink =
   <Header />
   <main class="">
     <article
-      class="relative flex h-full min-h-screen w-screen flex-col items-center gap-16 overflow-hidden"
+      class="relative flex h-full min-h-screen w-screen flex-col items-center gap-16 overflow-hidden pt-25"
     >
       <section
         class="section top-0 z-100 mb-3.5 flex w-screen items-center justify-center"
@@ -38,7 +38,7 @@ const extensionLink =
           </div>
         </div>
       </section>
-      <section class="flex w-full flex-wrap items-center justify-center gap-6">
+      <section class="flex w-full flex-wrap items-center justify-center">
         <a href={extensionLink} target="_blank">
           <ChromeStoreBadge />
         </a>
@@ -118,9 +118,11 @@ const extensionLink =
               </p>
             </div>
           </div>
-          <a href={extensionLink} target="_blank">
-            <ChromeStoreBadge2 />
-          </a>
+          <div class="flex w-full flex-wrap items-center justify-center">
+            <a href={extensionLink} target="_blank">
+              <ChromeStoreBadge2 />
+            </a>
+          </div>
         </div>
       </section>
       <Footer mode="dark" />
