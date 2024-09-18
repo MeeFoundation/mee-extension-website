@@ -4,9 +4,7 @@ import Header from "@components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ChromeStoreBadge from "@components/ChromeStoreBadge.astro";
 import ChromeStoreBadge2 from "@components/ChromeStoreBadge2.astro";
-
-const extensionLink =
-  "https://chromewebstore.google.com/detail/mee-extension-let-the-web/gfcagdccenaomgheadeimkfdfgkdapcf";
+import { extensionLink, privateAdvertising } from "./../../astro.config.mjs";
 ---
 
 <Layout title="Mee Extension">
@@ -34,7 +32,7 @@ const extensionLink =
               class="animate-riseIn text-center text-xl tracking-0.02 text-gray-800 md:text-2xl lg:text-3xl"
             >
               Introducing <a
-                href="https://private-advertising.mee.foundation/"
+                href={privateAdvertising}
                 target="_blank"
                 class="text-brand-600 underline">private advertising</a
               >. <br />Let the web work for you.

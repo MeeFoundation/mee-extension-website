@@ -1,6 +1,6 @@
 ---
 import { meeFoundation } from "./../../astro.config.mjs";
-import { github, discord } from "./../../astro.config.mjs";
+import { github, discord, privateAdvertising } from "./../../astro.config.mjs";
 export interface Props {
   mode: "dark" | "light";
 }
@@ -34,8 +34,9 @@ const rightLinks = [
     name: "Privacy Policy",
   },
   {
-    link: "/docs/",
+    link: privateAdvertising + "docs/users/mee-extension/",
     name: "Docs",
+    target: "_blank",
   },
 ];
 ---
