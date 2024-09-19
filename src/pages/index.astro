@@ -46,9 +46,9 @@ import { extensionLink, privateAdvertising } from "./../../astro.config.mjs";
         </a>
       </section>
       <section
-        class="section relative top-0 my-28 flex w-screen flex-col items-center justify-center pt-28"
+        class="section relative my-28 flex w-screen flex-col items-center justify-center pt-28"
       >
-        <div class="bg-1 top-0 bg-brand-50"></div>
+        <div class="bg-1 w-[600vw] bg-brand-50 md:w-[400vw]"></div>
         <div
           class="z-10 flex flex-col items-center justify-center gap-16 bg-brand-50 px-6 transition-opacity duration-500"
         >
@@ -127,6 +127,11 @@ import { extensionLink, privateAdvertising } from "./../../astro.config.mjs";
           </div>
         </div>
       </section>
+      <section
+        class="section relative flex w-screen flex-col items-center justify-center"
+      >
+        <div class="bg-1 w-[600vw] bg-white md:w-[400vw] !top-10"></div>
+      </section>
       <Footer mode="dark" />
     </article>
   </main>
@@ -139,8 +144,8 @@ import { extensionLink, privateAdvertising } from "./../../astro.config.mjs";
     border-top-right-radius: 50%;
     min-height: 150vh;
     height: 140%;
+    top: 0;
     transform: translate3d(0, 0, 0);
     z-index: 1;
-    width: 400vw;
   }
 </style>
