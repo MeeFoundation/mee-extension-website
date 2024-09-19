@@ -44,7 +44,7 @@ const rightLinks = [
 <footer
   id="footer"
   class:list={[
-    "footer z-200 flex w-[400vw] flex-col items-center justify-center pt-33 md:w-[200vw]",
+    "footer z-200 flex w-[200vw] flex-col items-center justify-center pt-33",
     {
       "footer--fill text-white": mode === "dark",
       "text-blue": mode === "light",
@@ -57,11 +57,11 @@ const rightLinks = [
       { "text-white": mode === "dark", "text-gray": mode === "light" },
     ]}
   >
-    <span class="hidden whitespace-nowrap xl:w-1/3 xl:inline"
+    <span class="hidden whitespace-nowrap xl:inline xl:w-1/3"
       >© {new Date().getFullYear()} The Mee Foundation, Inc.</span
     >
     <ul
-      class="flex flex-row gap-7 text-center xl:w-1/3 xl:justify-center md:gap-10"
+      class="flex flex-row gap-7 text-center md:gap-10 xl:w-1/3 xl:justify-center"
     >
       {
         links.map((link) => (
