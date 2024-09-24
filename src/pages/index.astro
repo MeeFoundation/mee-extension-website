@@ -3,8 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ChromeStoreBadge from "@components/ChromeStoreBadge.astro";
-import ChromeStoreBadge2 from "@components/ChromeStoreBadge2.astro";
-import { extensionLink, privateAdvertising } from "./../../astro.config.mjs";
+import { privateAdvertising } from "./../../astro.config.mjs";
 ---
 
 <Layout title="Mee Extension">
@@ -41,9 +40,7 @@ import { extensionLink, privateAdvertising } from "./../../astro.config.mjs";
         </div>
       </section>
       <section class="flex w-full flex-wrap items-center justify-center">
-        <a href={extensionLink} target="_blank">
-          <ChromeStoreBadge />
-        </a>
+        <ChromeStoreBadge />
       </section>
       <section
         class="section relative my-28 flex w-screen flex-col items-center justify-center pt-28"
@@ -121,9 +118,7 @@ import { extensionLink, privateAdvertising } from "./../../astro.config.mjs";
             </div>
           </div>
           <div class="flex w-full flex-wrap items-center justify-center">
-            <a href={extensionLink} target="_blank">
-              <ChromeStoreBadge2 />
-            </a>
+            <ChromeStoreBadge buttonType="secondary" />
           </div>
         </div>
       </section>
