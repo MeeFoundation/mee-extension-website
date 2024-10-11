@@ -1,12 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
+import { Header, Footer } from "mee-components";
+import { header, footer } from "../../astro.config.mjs";
 ---
 
 <Layout title="Mee Extension - Privacy Policy">
-  <Header />
-  <main class="scrollContainer transform-gpu">
+  <Header activePage="privacy-policy" header={header} />
+  <main class="scrollContainer transform-gpu pt-27">
     <article
       class="relative flex h-full min-h-screen w-screen flex-col items-center gap-16 overflow-hidden pt-8"
     >
@@ -199,9 +199,7 @@ import Header from "../components/Header.astro";
             <p class="pt-10">Last updated August 20, 2024</p>
           </div>
         </div>
-        <Footer
-          mode="dark"
-        />
+        <Footer mode="dark" footer={footer} />
       </section>
     </article>
   </main>

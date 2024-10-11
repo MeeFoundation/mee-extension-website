@@ -1,19 +1,19 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Header from "@components/Header.astro";
-import Footer from "../components/Footer.astro";
+import { Header, Footer } from "mee-components";
+import { header, footer } from "../../astro.config.mjs";
 import ChromeStoreBadge from "@components/ChromeStoreBadge.astro";
 // import { privateAdvertising } from "./../../astro.config.mjs";
 ---
 
 <Layout title="Mee Extension">
-  <Header />
+  <Header header={header}/>
   <main class="">
     <article
-      class="relative flex h-full min-h-screen w-screen flex-col items-center gap-16 overflow-hidden pt-25"
+      class="relative flex h-full min-h-screen w-screen flex-col items-center gap-16 overflow-hidden pt-27"
     >
       <section
-        class="section top-0 z-100 mb-3.5 flex w-screen items-center justify-center"
+        class="section top-0 z-100 mb-3.5 flex w-screen items-center justify-center mt-16"
       >
         <div
           class="flex max-w-150 flex-col items-center justify-center gap-6 px-6 transition-opacity duration-500 md:p-0"
@@ -134,7 +134,7 @@ import ChromeStoreBadge from "@components/ChromeStoreBadge.astro";
         </div>
       </section>
 
-      <Footer mode="dark" />
+      <Footer mode="dark" footer={footer} />
     </article>
   </main>
 </Layout>

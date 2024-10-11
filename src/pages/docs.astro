@@ -1,0 +1,33 @@
+---
+import { Header } from "mee-components";
+import { header } from "../../astro.config.mjs";
+import Layout from "../layouts/Layout.astro";
+import { DocsComponent } from "mee-components";
+import { privateAdvertising } from "./../../astro.config.mjs";
+const data = {
+  users: {
+    enabled: true,
+
+    link: privateAdvertising + "docs/users/mee-extension/",
+  },
+  providers: {
+    enabled: true,
+    link: privateAdvertising + "docs/providers/mee-extension/",
+  },
+  developers: {
+    enabled: true,
+    link: privateAdvertising + "docs/developers/mee-extension/",
+  },
+};
+---
+
+<Layout title="Docs">
+  <main class="">
+    <article
+      class="relative flex h-full min-h-screen w-screen flex-col items-center gap-2 overflow-hidden md:gap-16"
+    >
+      <Header type="docs" activePage="docs" header={header} />
+      <DocsComponent data={data} />
+    </article>
+  </main>
+</Layout>
