@@ -12,11 +12,11 @@ export const extensionLink =
   "https://chromewebstore.google.com/detail/mee-extension-let-the-web/gfcagdccenaomgheadeimkfdfgkdapcf";
 
 export const header = {
+  logoLink: meeFoundation,
   links: [
     {
       name: "About us",
-      link: meeFoundation,
-      target: "_blank",
+      link: `${meeFoundation}about/`,
       id: "about-us",
     },
     {
@@ -36,21 +36,18 @@ export const header = {
   ],
   footerLinks: [
     {
-      link: meeFoundation,
+      link: `${meeFoundation}about/`,
       name: "About",
-      target: "_blank",
       id: "about",
     },
     {
       link: "/privacy-policy/",
       name: "Privacy Policy",
-      target: "_blank",
       id: "privacy-policy",
     },
     {
       link: "/docs/",
       name: "Docs",
-      target: "_blank",
       id: "docs",
     },
   ],
@@ -76,19 +73,16 @@ export const footer = {
   ],
   rightLinks: [
     {
-      link: meeFoundation,
+      link: `${meeFoundation}about/`,
       name: "About",
-      target: "_blank",
     },
     {
       link: "/privacy-policy/",
       name: "Privacy Policy",
-      target: "_blank",
     },
     {
       link: "/docs/",
       name: "Docs",
-      target: "_blank",
     },
   ],
 };
