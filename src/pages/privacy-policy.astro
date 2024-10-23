@@ -1,15 +1,27 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Header, Footer } from "mee-components";
-import { header, footer } from "../../astro.config.mjs";
+import { Header, Footer, Breadcrumbs } from "mee-components";
+import { header, footer, meeFoundation } from "../../astro.config.mjs";
 ---
 
 <Layout title="Mee Extension - Privacy Policy">
-  <Header activePage="privacy-policy" header={header} />
-  <main class=" transform-gpu pt-27">
+  <Header
+    activePage="privacy-policy"
+    header={header}
+    location="Mee Extension"
+  />
+  <main class="transform-gpu pt-27">
     <article
-      class="relative flex h-full min-h-screen w-screen flex-col items-center gap-16 overflow-hidden pt-8"
+      class="relative flex h-full min-h-screen w-screen flex-col items-center gap-4 overflow-hidden mt-10 md:mt-16"
     >
+      <Breadcrumbs
+        className="hidden md:flex"
+        breadcrumbs={[
+          { title: "Projects", link: `${meeFoundation}projects/` },
+          { title: "Mee Extension", link: "/" },
+          { title: "Privacy Policy" },
+        ]}
+      />
       <section
         class="flex h-full w-screen transform-gpu flex-col items-center justify-start bg-white"
       >
