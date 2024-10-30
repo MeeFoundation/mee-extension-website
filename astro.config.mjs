@@ -96,6 +96,10 @@ export const footer = {
       link: "/docs/",
       name: "Docs",
     },
+    {
+      link: "/faq/",
+      name: "FAQ",
+    },
   ],
 };
 
