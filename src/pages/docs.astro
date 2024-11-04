@@ -6,15 +6,23 @@ import { DocsComponent } from "mee-components";
 import { privateAdvertising } from "./../../astro.config.mjs";
 const data = {
   users: {
+    title: "Users",
     enabled: true,
-
+    description:
+      "Click below to learn more about our private advertising project.",
     link: privateAdvertising + "docs/users/mee-extension/",
   },
   publishers: {
+    title: "Publishers",
+    description:
+      "Our goal is that publishers and small and medium sized businesses can increase their ad revenue by adding support for a new Mee-compatible ad network.",
     enabled: true,
     link: privateAdvertising + "docs/publishers/mee-extension/",
   },
   developers: {
+    title: "Developers",
+    description:
+      "Our development work on private advertising is its early stages. We will soon be reaching out to entrepreneurs and developers interested in developing a new Mee-compatible ad network.",
     enabled: true,
     link: privateAdvertising + "docs/developers/mee-extension/",
   },
