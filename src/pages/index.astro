@@ -18,27 +18,22 @@ import { privateAdvertising } from "./../../astro.config.mjs";
         <div
           class="flex max-w-150 flex-col items-center justify-center gap-6 px-6 transition-opacity duration-500 md:p-0"
         >
-          <div class="overflow-hidden">
-            <h1
-              class="marker animate-riseIn text-center text-4xl font-semibold text-gray-900 lg:text-7xl lg:tracking-0.02"
+          <h1
+            class="marker text-center text-4xl font-semibold text-gray-900 lg:text-7xl lg:tracking-0.02"
+          >
+            Mee Extension
+          </h1>
+          <h3
+            class="text-center text-xl tracking-0.02 text-gray-800 md:text-2xl lg:text-3xl"
+          >
+            Introducing
+            <a
+              href={privateAdvertising}
+              target="_blank"
+              class="text-brand-600 underline">private advertising</a
             >
-              Mee
-              <mark class="whitespace-nowrap">Extension</mark>
-            </h1>
-          </div>
-          <div class="overflow-hidden">
-            <h3
-              class="animate-riseIn text-center text-xl tracking-0.02 text-gray-800 md:text-2xl lg:text-3xl"
-            >
-              Introducing
-              <a
-                href={privateAdvertising}
-                target="_blank"
-                class="text-brand-600 underline">private advertising</a
-              >
-              . <br />Let the web work for you.
-            </h3>
-          </div>
+            . <br />Let the web work for you.
+          </h3>
         </div>
       </section>
       <section class="flex w-full flex-wrap items-center justify-center">
@@ -53,7 +48,7 @@ import { privateAdvertising } from "./../../astro.config.mjs";
         >
           <div class="overflow-hidden">
             <h2
-              class="marker animate-riseIn text-center text-2xl font-bold text-gray-900 md:text-2xl lg:text-5xl lg:tracking-0.02"
+              class="marker text-center text-2xl font-bold text-gray-900 md:text-2xl lg:text-5xl lg:tracking-0.02"
             >
               Mee Extension <mark class="whitespace-nowrap">Benefits</mark>
             </h2>
@@ -128,7 +123,7 @@ import { privateAdvertising } from "./../../astro.config.mjs";
         class="relative flex w-screen flex-col items-center justify-center"
       >
         <div
-          class="absolute top-10 z-200 flex h-52 w-[200vw] md:w-[115vw] flex-col items-center justify-center rounded-t-1/2 bg-white xl:w-[140vw]"
+          class="absolute top-10 z-200 flex h-52 w-[200vw] flex-col items-center justify-center rounded-t-1/2 bg-white md:w-[115vw] xl:w-[140vw]"
         >
         </div>
       </section>
