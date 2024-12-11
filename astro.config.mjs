@@ -8,7 +8,7 @@ export const github = "https://github.com/MeeFoundation/browser-extensions/";
 export const privateAdvertising = "https://private-advertising.mee.foundation/";
 export const discord = "https://discord.gg/PB8qxrQXup";
 export const extensionLink =
-  "https://chromewebstore.google.com/detail/mee-extension-let-the-web/gfcagdccenaomgheadeimkfdfgkdapcf";
+  "https://chromewebstore.google.com/detail/mee-extension-let-the-web/ggefahgegbnndppllgajkfjkpmgeahhn";
 
 export const header = {
   logoLink: meeFoundation,

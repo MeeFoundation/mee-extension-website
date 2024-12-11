@@ -1,6 +1,11 @@
 ---
 import { Header, Breadcrumbs, Accordion, Footer } from "mee-components";
-import { header, meeFoundation, footer } from "../../astro.config.mjs";
+import {
+  header,
+  meeFoundation,
+  footer,
+  extensionLink,
+} from "../../astro.config.mjs";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -132,11 +137,8 @@ import Layout from "../layouts/Layout.astro";
                   </p>
                   <p>
                     To install in Chrome Mee Extension, visit the{" "}
-                    <a href="https://chromewebstore.google.com/detail/mee-extension-let-the-web/gfcagdccenaomgheadeimkfdfgkdapcf">
-                      Mee Extension
-                    </a>{" "}
-                    Chrome Web Store listing and click the “Add to Chrome”
-                    button there.
+                    <a href={extensionLink}>Mee Extension</a> Chrome Web Store
+                    listing and click the “Add to Chrome” button there.
                   </p>
                 </div>
               ),
