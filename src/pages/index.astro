@@ -1,7 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import { Header, Footer } from "mee-components";
-import { header, footer, privateAdvertising } from "../config";
+import { header, footer, globalPrivacyControlLink } from "../config";
 import ChromeStoreBadge from "@components/ChromeStoreBadge.astro";
 
 const benefits = [
@@ -22,7 +22,7 @@ const benefits = [
   {
     title: "Convenience",
     description:
-      "Enjoy content supported by ads that respect your privacy and match your interests.",
+      `It automatically sends the <a href='${globalPrivacyControlLink}' target='_blank' class='text-brand-600 underline dark:text-brand-300'>Global Privacy Control</a> “opt out” signal to every website you visit. All you have to do is install it—nothing else to do!`,
     image: "/images/convenience-benefit.svg",
     imageDark: "/images/convenience-benefit-dark.svg",
   },
@@ -51,34 +51,14 @@ const benefits = [
           <h2
             class="text-center text-xl tracking-0.02 text-gray-800 md:text-2xl lg:text-3xl dark:text-grey-100"
           >
-            Introducing
-            <a
-              href={privateAdvertising}
-              class="text-brand-600 underline dark:text-brand-300"
-              >private advertising</a
-            >. <br />Let the web work for you.
+            This extension automatically tells every website you visit not to sell/share your personal data. It’s as simple as that!
           </h2>
-        </div>
-        <div class="mt-16 flex w-full flex-wrap items-center justify-center">
-          <ChromeStoreBadge />
         </div>
       </section>
       <section
         class="relative my-28 flex w-screen max-w-7xl flex-col items-center justify-center pt-28"
       >
         <div class="z-10 flex flex-col items-center justify-center px-6">
-          <div class="flex flex-col gap-4">
-            <h2
-              class="text-center text-2xl font-bold text-gray-900 md:text-2xl lg:text-5xl lg:tracking-0.02 dark:text-grey-50"
-            >
-              Benefits
-            </h2>
-            <h3
-              class="max-w-3xl text-center text-base tracking-0.02 text-gray-800 md:text-lg lg:text-2xl dark:text-grey-100"
-            >
-              Bringing a human-centered experience to internet advertising
-            </h3>
-          </div>
           <div class="flex w-screen max-w-7xl">
             <div class="flex items-stretch justify-center gap-4 p-8">
               {
@@ -100,8 +80,7 @@ const benefits = [
                         <div class="flex items-center gap-2 text-left text-xl font-semibold text-grey-900 lg:text-2xl dark:text-grey-50">
                           {benefit.title}
                         </div>
-                        <div class="text-sm text-grey-800 lg:text-base dark:text-grey-200">
-                          {benefit.description}
+                        <div class="text-sm text-grey-800 lg:text-base dark:text-grey-200" set:html={benefit.description}>
                         </div>
                       </div>
                     </div>
@@ -121,7 +100,7 @@ const benefits = [
             <h2
               class="text-center text-3xl font-bold leading-thick md:text-4xl md:leading-normal lg:text-5xl"
             >
-              Get the latest build of our experimental extension
+              Gain some privacy and peace of mind.
             </h2>
             <h3
               class="text max-w-3xl text-pretty px-6 text-center text-xl md:text-2xl"

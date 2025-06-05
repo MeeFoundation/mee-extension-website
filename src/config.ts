@@ -1,6 +1,7 @@
 export const meeFoundation = "https://mee.foundation/";
 export const github = "https://github.com/MeeFoundation/browser-extensions/";
 export const privateAdvertising = "https://private-advertising.mee.foundation/";
+export const globalPrivacyControlLink = "https://globalprivacycontrol.org/";
 export const discord = "https://discord.gg/PB8qxrQXup";
 export const extensionLink =
   "https://chromewebstore.google.com/detail/mee-extension-let-the-web/gfcagdccenaomgheadeimkfdfgkdapcf";
